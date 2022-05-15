@@ -1,0 +1,27 @@
+export declare type GlobalCompositeOperation = 'source-over' | 'source-in' | 'source-out' | 'source-atop' | 'destination-over' | 'destination-in' | 'destination-out' | 'destination-atop' | 'lighter' | 'copy' | 'xor' | 'multiply' | 'screen' | 'overlay' | 'darken' | 'lighten' | 'color-dodge' | 'color-burn' | 'hard-light' | 'soft-light' | 'difference' | 'exclusion' | 'hue' | 'saturation' | 'color' | 'luminosity';
+export declare type LineCap = 'butt' | 'round' | 'square';
+export declare type LineJoin = 'round' | 'bevel' | 'miter';
+export declare type ColorStyle = string | CanvasGradient | CanvasPattern;
+export declare type TextAlign = 'left' | 'right' | 'center' | 'start' | 'end';
+export declare type TextBaseline = 'top' | 'hanging' | 'middle' | 'alphabetic' | 'ideographic' | 'bottom';
+export declare type RenderContextData = {
+    fillStyle: ColorStyle;
+    font: string;
+    globalAlpha: number;
+    globalCompositeOperation: GlobalCompositeOperation;
+    imageSmoothingEnabled: boolean;
+    lineCap: LineCap;
+    lineDashOffset: number;
+    lineJoin: LineJoin;
+    lineWidth: number;
+    miterLimit: number;
+    shadowBlur: number;
+    shadowColor: string;
+    shadowOffsetX: number;
+    shadowOffsetY: number;
+    strokeStyle: ColorStyle;
+    textAlign: TextAlign;
+    textBaseline: TextBaseline;
+};
+export declare function defaultRenderContextData(): RenderContextData;
+export declare function cloneRenderContextData(from: RenderContextData): RenderContextData;
